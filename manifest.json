@@ -1,0 +1,34 @@
+{
+    "name": "Game Pass Checker extension",
+    "version": "1",
+    "manifest_version": 2,
+    "icons": {
+        "48": "assets/xboxicon.png"
+      },
+        "browser_action": {
+        "browser_style": true
+    },
+    "permissions": [
+        "tabs",
+        "identity",
+        "notifications",
+        "*://docs.google.com/*"
+    ],
+
+    "content_scripts": [
+        {
+            "matches": [
+                "https://store.steampowered.com/app/*"
+            ],
+            "js": [
+                "src/js/gamePassExt.js",
+                "src/js/CSVParser.js",
+                "src/js/searchFuncs.js",
+                "src/js/insertData.js"
+            ],
+            "css": [
+                "src/assets/gamePassExt.css"
+              ]
+        }
+    ]
+}
