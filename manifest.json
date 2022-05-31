@@ -1,11 +1,12 @@
 {
     "name": "Game Pass Checker extension",
-    "version": "1",
+    "description": "An extension to check the status of a Steam game on Xbox Game Pass",
+    "version": "1.0",
     "manifest_version": 2,
     "icons": {
-        "48": "assets/xboxicon.png"
-      },
-        "browser_action": {
+        "48": "src/assets/xboxicon.png"
+    },
+    "browser_action": {
         "browser_style": true
     },
     "permissions": [
@@ -14,7 +15,6 @@
         "notifications",
         "*://docs.google.com/*"
     ],
-
     "content_scripts": [
         {
             "matches": [
@@ -28,7 +28,7 @@
             ],
             "css": [
                 "src/assets/gamePassExt.css"
-              ]
+            ]
         }
     ]
 }
