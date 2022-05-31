@@ -1,13 +1,11 @@
 function searchGameByName(arr, name) {
 
     let start = 0, end = arr.length - 1;
-    console.log(end);
     // Iterate while start not meets end
     while (start <= end) {
 
         // Find the mid index
         let mid = Math.floor((start + end) / 2);
-        console.log(mid)
         // If element is present at mid, return True
         if (arr[mid][0] === name) return mid;
 
@@ -38,6 +36,5 @@ function searchGameData(gameArr) {
     if (index !== -1) {
         gameData = gameArr[index];
     }
-    console.log(gameData)
     return gameData;
 }

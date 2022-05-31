@@ -1,5 +1,4 @@
 function insertData(divData) {
-    console.log(divData)
     let sheetColumns = [null, "System", null, "Status", "Added", "Removed"];
 
 
@@ -21,7 +20,6 @@ function insertData(divData) {
         let div_rows = document.createElement("div");
 
         for (const key of sheetColumns) {
-            console.log(key)
             if (key && divData[sheetColumns.indexOf(key)]) {
                 let p_row = document.createElement("p");
                 let span_data = document.createElement("span");

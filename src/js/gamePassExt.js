@@ -1,6 +1,5 @@
 function gamePassExtension(url) {
 
-    console.log("hello")
     fetch(url)
         .then(data => data.text())
         .then(t => CSVToArray(t, ","))
@@ -10,5 +9,4 @@ function gamePassExtension(url) {
 var url = "https://docs.google.com/spreadsheets/d/1kspw-4paT-eE5-mrCrc4R9tg70lH2ZTFrJOUmOtOytg/gviz/tq?tqx=out:csv&sheet=sheet_name"
 
 // Main
-console.log("hello")
 gamePassExtension(url);
