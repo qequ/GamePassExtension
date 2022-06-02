@@ -1,5 +1,5 @@
 function insertData(divData) {
-    let sheetColumns = [null, "System", null, "Status", "Added", "Removed"];
+    let sheetColumns = ["Game", "System", null, "Status", "Added", "Removed"];
 
 
     let element = document.getElementsByClassName("rightcol game_meta_data")[0];
@@ -16,17 +16,24 @@ function insertData(divData) {
 
     }
     else {
+        if (divData['prob'] !== 1) {
+            // possibly it's not the game
+            let p_tag = document.createElement("p");
+            p_tag.textContent = "The Best Guess";
+            text_div.append(p_tag);
+        }
+
         // add divs with status of the game in game pass
         let div_rows = document.createElement("div");
 
         for (const key of sheetColumns) {
-            if (key && divData[sheetColumns.indexOf(key)]) {
+            if (key && divData['gameData'][sheetColumns.indexOf(key)]) {
                 let p_row = document.createElement("p");
                 let span_data = document.createElement("span");
 
                 span_data.textContent = key + ": ";
                 let b_data = document.createElement("b");
-                b_data.textContent = divData[sheetColumns.indexOf(key)];
+                b_data.textContent = divData['gameData'][sheetColumns.indexOf(key)];
                 p_row.append(span_data);
                 p_row.append(b_data);
 
