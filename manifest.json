@@ -10,9 +10,6 @@
         "browser_style": true
     },
     "permissions": [
-        "tabs",
-        "identity",
-        "notifications",
         "*://docs.google.com/*"
     ],
     "content_scripts": [
@@ -24,7 +21,8 @@
                 "src/js/gamePassExt.js",
                 "src/js/CSVParser.js",
                 "src/js/searchFuncs.js",
-                "src/js/insertData.js"
+                "src/js/insertData.js",
+                "src/js/fuzzyset.js"
             ],
             "css": [
                 "src/assets/gamePassExt.css"
