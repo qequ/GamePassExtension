@@ -1,10 +1,7 @@
 function searchGameData(gameArr) {
-    a = FuzzySet();
     const gamesNamesArr = gameArr.map(x => x[0]).flat(2)
 
-    gameArr.forEach(element => {
-        a.add(element[0]);
-    });
+    a = FuzzySet(gamesNamesArr);
 
     let name = document.getElementById("appHubAppName").innerText
     let gameData = null;
