@@ -4,7 +4,8 @@
     "version": "1.0",
     "manifest_version": 2,
     "icons": {
-        "48": "src/assets/xboxicon.png"
+        "48": "src/assets/xboxicon.png",
+        "96": "src/assets/xboxicon96.png"
     },
     "browser_action": {
         "browser_style": true
